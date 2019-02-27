@@ -1,5 +1,5 @@
 # ebayapi
-Some PHP scripts to help manage ebay listings and ebay messaging. The code is a raw assembly of various scripts written over the years.
+Some PHP scripts to help manage ebay listings and ebay messaging. The code is a VERY raw assembly of various scripts written over the years, for internal business use only. Use at your peril!
 
 1. Install both folders in root server folder
 
