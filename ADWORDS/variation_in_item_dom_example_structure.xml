@@ -1,0 +1,21 @@
+<Variations> VariationsType
+  <Variation> VariationType
+	<PrivateNotes> string </PrivateNotes>
+	<Quantity> int </Quantity>
+	
+	<SKU> SKUType (string) </SKU>
+	<StartPrice currencyID="CurrencyCodeType"> AmountType (double) </StartPrice>
+	<VariationSpecifics> NameValueListArrayType
+	  <NameValueList> NameValueListType
+		<Name> string </Name>
+		<Value> string </Value>
+		<!-- ... more Value values allowed here ... -->
+	  </NameValueList>
+	  <!-- ... more NameValueList nodes allowed here ... -->
+	</VariationSpecifics>
+	<!-- ... more VariationSpecifics nodes allowed here ... -->
+	<VariationTitle> string </VariationTitle>
+	<WatchCount> long </WatchCount>
+  </Variation>
+  <!-- ... more Variation nodes allowed here ... -->
+</Variations>

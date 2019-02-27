@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Framework</title>
+
+<style type='text/css' media='all'>@import url('userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="nav/nav.js"></script>
+<script type="text/javascript" src="nav/prototype.lite.js"></script>
+<script type="text/javascript" src="nav/moo.fx.js"></script>
+<script type="text/javascript" src="nav/user_guide_menu.js"></script>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('null');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="images/navtoggle.png" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>Pagination</h1></td>
+
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+
+
+
+
+
+<br clear="all" />
+
+
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+
+<h2>Pagination Caller</h2>
+
+<h3>app/calls/pagination_call.php</h3>
+<p><ul><li>Creates instance of class -> $pagination</li></ul></p>
+
+<h2>Pagination Classes</h2>
+<p>Pagination classes need to be called in the following order they appear here to work properly.</p>
+<hr>
+<h3>app/pagination/pagination.inc.php</h3>
+<hr>
+
+<h4>public function paginate_numbers($count_of_entries, $items_per_page, $current_page, $pages_to_show)</h4>
+<p>
+<ul>
+<li>Function gets the basic pagination numbers and sets static variables for use in next function</li>
+<li>$count_of_entries = number of returned values from dbase</li>
+			<li>$items_per_page = number of desired items to appear on each page</li>
+			<li>$current_page = number of current page</li>
+			<li>$pages_to_show = number of pages to show in results</li>
+			
+</ul></p>
+
+
+
+<h4>public function pagination_numbers_set()</h4>
+
+<p><ul><li>Function sets the page numbers with next, prev, first, and last. Sets into static variables</li></ul></p>
+
+<h4>public function set_pagination_html($prefix, $suffix)</h4>
+
+<p><ul>
+
+<li>Function sets the pagination html with chosen prefix (ie. Page) and suffix (ie. .htm) to for example Page1.htm</li>
+<li>Returns associative array: ['prev'], ['first'], ['middle'][$x], ['last'], ['next']</li>
+<li>['prev'] -> Previous link. [0] = Single number value. [1] = suffix and prefix string.  If null then no previous.</li>
+<li>['first'] -> First number. [0] = Single number value. [1] = suffix and prefix string. If null then no number.</li>
+<li>['middle'] -> Middle numbers. [$i][0] = single number value. [$i][1] = suffix and prefix string.</li>
+<li>['last'] -> Last number. [0] = Single number value. [1] = suffix and prefix string. If null then no number.</li>
+<li>['next'] -> Next link. [0] = Single number value. [1] = suffix and prefix string.  If null then no next.</li>
+
+</ul>
+
+</p>
+
+
+</div>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="#top">Top of Page</a></p>
+<p>Framework &nbsp;&middot;&nbsp; Copyright &#169; 2013 - 2013 </p>
+</div>
+
+
+
+</body>
+</html>

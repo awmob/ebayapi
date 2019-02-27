@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Framework</title>
+
+<style type='text/css' media='all'>@import url('userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="nav/nav.js"></script>
+<script type="text/javascript" src="nav/prototype.lite.js"></script>
+<script type="text/javascript" src="nav/moo.fx.js"></script>
+<script type="text/javascript" src="nav/user_guide_menu.js"></script>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('null');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="images/navtoggle.png" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>Feed Reader</h1></td>
+
+
+
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+
+
+
+
+
+<br clear="all" />
+
+
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+
+<h2>Feed Reader Caller</h2>
+
+<h3>app/calls/feed_reader_call.php</h3>
+<p><ul>
+<li>Creates instance of class -> $feed_reader</li>
+</ul>
+</p>
+
+<h2>Feed Reader Class</h2>
+<p>Reads and checks that feed is according to desired specs. Feed must contain headers in first line.</p>
+
+<hr>
+<h3>app/feed_reader/feed_reader.inc.php</h3>
+<hr>
+
+
+
+<h4>public function break_feed_lines($feed_file_data, $line_delimiter)</h4>
+
+<p><ul>
+
+<li>Creates and returns single dimensional array with separated lines from feed</li>
+<li>$feed_file_data -> String of feed data with separated lines</li>
+<li>$line_delimiter -> Desired line delimiter -> selected from config $feed_reader_config['line_delimiter'][$i]</li>
+
+</ul></p>
+
+
+<h4>public function break_up_feed_lines_and_clean($feed_lines, $space_delim, $type)</h4>
+
+<p>
+	<ul>
+
+		<li>Creates and returns multi dimensional array $lines_and_bits with separated lines from feed. Checks if the number of elements are identical for each line - uses the first line as baseline. Entries are trimmed. </li>
+		<li>First entry in $lines_and_bits[0] will contain error associative array:</li>
+			<ul>
+				<li>$error['error_exists'] -> True if error exists. False if no error.</li>
+				<li>$error['error_ends_upload'] -> True if fatal error exists and signifies to end upload. False if no error.</li>
+				<li>$error['error_message'] -> String with error message.</li>
+				<li>To use: $lines_and_bits[0]['error_exists'] etc.</li>
+			</ul>
+		<li>Subsequent entries in $lines_and_bits[$i] will contain array of data elements if they exist, and if there are no errors. If there are errors and type 1 is chosen, upload has been halted, and array will only contain errors, and no lines. If there are errors and type 0 is chosen, the upload has been allowed, and the array will contain the allowed lines, if they exist.</li>
+			<ul>
+				<li>To use: $lines_and_bits[$i][$x]</li>				
+			</ul>
+		
+
+
+			<li>$feed_lines -> Single dimensional array with lines from the feed</li>
+			<li>$space_delim -> Desired space delimiter -> selected from config $feed_reader_config['element_delimiter'][$i]</li>
+			<li>$type -> Type of upload. Type 0 - allows skipping of lines with incorrect number of elements, type 1 halts upload altogether if lines do not contain correct number of elements</li>
+ 
+
+
+	</ul>
+</p>
+
+
+
+</div>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="#top">Top of Page</a></p>
+<p>Framework &nbsp;&middot;&nbsp; Copyright &#169; 2013 - 2013 </p>
+</div>
+
+
+
+</body>
+</html>

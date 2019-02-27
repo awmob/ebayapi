@@ -1,0 +1,1 @@
+core of problem - trckcing allocated resources vs actual assigned resources and costs. 

@@ -1,0 +1,51 @@
+	/*	
+		Permalinks
+		http://www.seomoz.org/ugc/making-website-urls-seo-friendly-and-pretty
+		http://iamseanmurphy.com/creating-seo-friendly-urls-in-php-with-url-slug/
+
+	*/
+	
+	
+	.header_td, .main_td, .main_td_b{
+		border-style: solid;
+		border-width: 1px 0px 1px 0px;
+		
+		background-color: #ddd;
+		padding: 5px;
+	}
+
+	.main_td{
+		border-width: 0px 0px 1px 0px;
+		background-color: #eee;
+	}
+
+	.main_td_b{
+		border-width: 0px 0px 1px 0px;
+		background-color: #fff;
+	}
+
+	.table_main_style{
+		width: 900px;
+		border-style: solid;
+		border-color: black;
+		border-width: 1px 1px 1px 1px;
+	}
+
+	.dropdown{
+		font-size: 10px;
+		border-width: 1px 1px 1px 1px;
+		border-style: solid;
+		border-color: black;
+	}
+	
+	.liststyle{
+		list-style-type: circle;
+	}
+
+	.divs{
+		float:left;
+		border-style: solid;
+		border-color: black;
+		border-width: 1px 1px 1px 1px;
+		width: 200px;
+	}

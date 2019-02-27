@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Framework</title>
+
+<style type='text/css' media='all'>@import url('userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="nav/nav.js"></script>
+<script type="text/javascript" src="nav/prototype.lite.js"></script>
+<script type="text/javascript" src="nav/moo.fx.js"></script>
+<script type="text/javascript" src="nav/user_guide_menu.js"></script>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('null');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="images/navtoggle.png" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>HTML Output</h1></td>
+
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+
+
+
+
+
+<br clear="all" />
+
+
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+
+<h2>HTML Output Caller</h2>
+
+<h3>app/calls/html_output_call.php</h3>
+<p>Creates instance of class -> $html_output</p>
+
+<h2>HTML Output Class</h2>
+<hr>
+<h3>app/html/html_output.inc.php</h3>
+<hr>
+
+<h4>public function create_table($header_array, $values_array, $header_td_styles, $values_td_styles, $table_style)</h4>
+<p>
+Creates a table based on desired input. Input is via arrays, strings entered into elements. Can be any html valid code.
+</p>
+<p>
+$header_array = single dimensional array -> string values of headers. Can be anything that parses into html.<br>
+$values_array = multidimensional array [$i][$x] -> String values. Can be anything, including html, form elements, etc. [$i] Must be same size as header array<br>
+$header_td_styles = single dimensional array -> contains-> css class name. Must be same size as header_array.<br>
+$values_td_styles = multi dimensional array [$i][$x] -> contains-> css class name. [$x] Must be same size as header_array.<br>
+$table_style = single string -> contains-> css class name
+
+</p>
+
+<h4>public function create_dropdown($values, $select_name, $style)</h4>
+<p>
+Creates a dropdown menu based on desired input. 
+</p>
+<p>
+			$values = multi-dimensional array of values and names -> [$i][0] = value, [$i][1] = display name, [$i][2] = selected status -> true, else false - only one can be true -> true=selected. [$i][3] = onclick submit. true or false. If true then sets auto submit. <br>
+			$select_name = name of variable to post. String.<br>
+			$style = name of stylesheet class. String.<br>
+
+</p>
+
+<h4>public function create_form($type, $action, $data)</h4>
+<p>
+Creates a form based on input. File upload form or standard form. Form data goes in between form element. 
+</p>
+<p>
+			$type = Integer representing type of form. 0 = standard form. 1 = file upload form.<br>
+			$action = String with name of file to send form data to.<br>
+			$data = String with all of the form data and html presentation
+
+</p>
+
+
+<h4>public function create_checkbox($name, $value, $checked, $onclick_code = false)</h4>
+<p>
+Creates a checkbox on input. 
+</p>
+<p>
+			$name = String with the checkbox name<br>
+			$value = String with the value of the checkbox<br>
+			$checked = Boolean representing if checkbox is checked. True = checked. False = not checked.<br>
+			$onclick_code = code for javascript onclick. optional. Default = false;
+
+</p>
+
+
+
+<h4>public function file_uploader($name, $max_size, $style = false)</h4>
+<p>
+Creates a file uploader on input. 
+</p>
+<p>
+			$name = String with the form element name<br>
+			$max_size = Maximum file size in bytes<br>
+			$style = Name of stylesheet class. default is false
+
+</p>
+
+
+<h4>public function textbox_element($name, $value = false, $style = false, $onclick_code = false)</h4>
+<p>
+Creates a textbox on input. 
+</p>
+<p>
+			$name = String with the form element name<br>
+			$size = size of textbox<br>
+			$value = value to default enter into textbox. default is false. <br>
+			$style = Name of stylesheet class. default is false.<br>
+			$onclick_code = code to run if clicked. default is false.
+
+
+</p>
+
+<h4>public function hidden_element($name, $value)</h4>
+<p>
+Creates a hidden form element on input. 
+</p>
+<p>
+			$name = String with the form element name<br>
+			$value = String value of the form element
+
+
+</p>
+
+
+
+<h4>public function textarea_element($name, $rows, $cols, $value = false, $style = false, $onclick_code = false)</h4>
+<p>
+Creates a textarea form element on input. 
+</p>
+<p>
+			$name = String with the form element name<br>
+			$rows = integer row size of textarea<br>
+			$cols = integer column size of textarea <br>
+			$value = value to default enter into textarea. default is false. <br>
+			$style = Name of stylesheet class. default is false.<br>
+			$onclick_code = code to run if clicked. default is false.
+
+
+</p>
+
+
+
+<h4>public function radio_element($name, $values)</h4>
+<p>
+Creates a radio button set form element on input. 
+</p>
+<p>
+			$name = String with the form element name<br>
+			$values = Multi dimensional array with values and names [$i][0] = value, [$i][1] = name
+
+
+</p>
+
+
+<h4>public function list_element($name, $values, $style = false, $type = false)</h4>
+<p>
+Creates a list element. 
+</p>
+<p>
+			$values = Multi dimensional array with names and links [$i][0] = name, [$i][1] = link, - set [$i][1] to false if no link<br>
+			$style = name of stylesheet class<br>
+			$type = 0 or 1. 0 = unordered list, 1 = ordered list. If not set, then defaults to 0
+
+</p>
+
+<h4>public function create_submit($value = false, $type = false, $image_loc = false, $style = false)</h4>
+<p>
+Creates a submit button or image. 
+</p>
+<p>
+			$value = String with text to dislay on button - default is false<br>
+			$type = 0 or 1. 0 = standard, 1 = image. If not set, then defaults to 0 - default is false<br>
+			$image_loc = string of image location. Must be included if $type = image. - default is false<br>
+			$style = name of stylesheet class - default is false<br>
+			* If no variables are set, only standard raw button is returned
+
+</p>
+
+<h4>public function create_series_of_divs($data, $style = false)</h4>
+<p>
+Returns string with a series of divs. The div series is ideal for displaying products, images etc. in a series, where we want them to appear the same if side-by-side, or is useful for menus if appearing top-to-bottom. 
+</p>
+<p>
+			$data = single dimensional array of data to put in between div elements<br>
+			$style = name of stylesheet class - default is false<br>
+			*All divs will have the same style. Suggestion - use float:left to display divs side-by-side and close with empty clear div.
+
+</p>
+
+<h4>public function password_element($name, $size, $style = false)</h4>
+<p>
+Returns string with password element.
+</p>
+<p>
+			$name = String with the form element name<br>
+			$size = size of textbox<br>
+			$style = Name of stylesheet class. default is false.
+
+</p>
+
+
+
+		
+</div>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="#top">Top of Page</a></p>
+<p>Framework &nbsp;&middot;&nbsp; Copyright &#169; 2013 - 2013 </p>
+</div>
+
+
+
+</body>
+</html>

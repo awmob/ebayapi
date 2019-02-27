@@ -1,0 +1,36 @@
+2XVE-CRE36W6		2X 7" 36W CREE LED 12V / 24V Work Flood Spot Light	Dynamic Power	2xve-cre36w6.txt	149	79.95	49	9	2.1	Y	20											30	14	26	1
+2XVE-EPI27W		2X 27W EPISTAR LED 12V / 24V Work Flood Spot Light	Dynamic Power	2xve-epi27w.txt	99	49.95	29	8	1.5	Y	20											15	12	14	1
+4XVE-CRE36W6		4X 7" 36W CREE LED 12V / 24V Work Flood Spot Light	Dynamic Power	4xve-cre36w6.txt	269	179.95	109	12	4.2	Y	20											30	14	52	1
+4XVE-EPI27W		4X 27W EPISTAR LED 12V / 24V Work Flood Spot Light	Dynamic Power	4xve-epi27w.txt	169	99.95	59	10	3	Y	20											15	12	28	1
+8XVE-CRE36W6		8X 7" 36W CREE LED 12V / 24V Work Flood Spot Light	Dynamic Power	8xve-cre36w6.txt	349	259.95	189	18	8.4	Y	20											30	14	104	1
+8XVE-EPI27W		8X 27W EPISTAR LED 12V / 24V Work Flood Spot Light	Dynamic Power	8xve-epi27w.txt	279	179.95	109	14	6	Y	20											15	12	56	1
+AQ-AP13		360L/h 4 Outlet Aqua Aquarium Air Pump	Dynamic Power	aq-ap13.txt	99	49.95	29	8	1	Y	20											22	15	10	1
+AQ-AP4		210L/H 2 Outlet Aqua Aquarium Air Pump	Dynamic Power	aq-ap4.txt	69	34.95	15	8	0.65	Y	20											19	11	6	1
+AQ-AP65		4500L/H 10 Outlet Aqua Aquarium Air Pump	Dynamic Power	aq-ap65.txt	189	119.95	89	14	6	N	0											23	23	20	1
+AQ-FT28		28L Aquarium Aqua Intelligent Fish Tank With Filter Pump	Dynamic Power	aq-ft28.txt	189	99.95	59	14	6.45	Y	20											33	34	35	1
+AQ-HW303		1400L/H Aqua Aquarium External UV Light Canister Filter	Dynamic Power	aq-hw303.txt	169	99.95	69	16	7.05	Y	20											35	28	43.5	1
+AQ-HW304		2000L/H Aqua Aquarium External UV Light Canister Filter	Dynamic Power	aq-hw304.txt	179	109.95	79	16	7.85	N	0											39.5	31.5	47.5	1
+AQ-HW504		1000L/H Aqua Aquarium External Canister Filter	Dynamic Power	aq-hw504.txt	169	99.95	59	12	4.15	Y	20											31.5	21.5	35	1
+AQ-LED10		18W 90cm Aquarium Aqua LED Lamp For Fish Tank	Dynamic Power	aq-led10.txt	139	79.95	39	8	0.65	Y	20											100	8	7	1
+AQ-LED12		22W 120cm Aquarium Aqua LED Lamp For Fish Tank	Dynamic Power	aq-led12.txt	149	79.95	49	8	0.75	Y	20											108	8	7	1
+AQ-LED6		10W 60cm Aquarium Aqua LED Lamp For Fish Tank	Dynamic Power	aq-led6.txt	119	69.95	34	8	0.5	Y	20											54	8	7	1
+AQ-SP2500		2500L/H Aqua Aquarium Submersible Water Pump	Dynamic Power	aq-sp2500.txt	99	49.95	29	8	1.2	Y	20											18	11	11	1
+AQ-SP3000		3000L/H Aqua Aquarium Submersible Water Pump	Dynamic Power	aq-sp3000.txt	119	69.95	34	8	1.5	Y	20											18	12.5	12.5	1
+AQ-SP5000		5000L/H Aqua Aquarium Submersible Water Pump	Dynamic Power	aq-sp5000.txt	149	79.95	46	9	2.2	Y	20											22	15	16	1
+AQ-T5HO10		100cm 2x39W Aqua Aquarium T5 HO Lamp Blue White Fluoscent Light	Dynamic Power	aq-t5ho10.txt	149	79.95	49	8	1.7	Y	20											104	14	5.5	1
+AQ-T5HO12		120cm 2x54W Aqua Aquarium T5 HO Lamp Blue White Fluoscent Light	Dynamic Power	aq-t5ho12.txt	189	99.95	69	9	2.05	Y	20											134	14	5.5	1
+AQ-T5HO6		60cm 2x24W Aqua Aquarium T5 HO Lamp Blue White Fluoscent Light	Dynamic Power	aq-t5ho6.txt	139	79.95	39	8	1.15	Y	20											72	14	5.5	1
+AQ-UV22		22W 2500L/H Aquarium Aqua UV Light Filter Sterilizer	Dynamic Power	aq-uv22.txt	149	79.95	44	10	2.3	Y	20											38	24	11	1
+AQ-UV40		40W 4500L/H Aquarium Aqua UV Light Filter Sterilizer	Dynamic Power	aq-uv40.txt	169	99.95	56	10	2.65	Y	20											55	25	11	1
+HA-IM32BK		3.2 Portable Ice Cube Maker Machine Black	Home Ready	ha-im32bk.txt	349	229.95	169	27	15.7	Y	20											41	45	45.8	1
+PET-PP32S		32" SUPER Strong Powder Coated Frame 8 Panel Pet Playpen Enclosure	Home Ready	pet-pp32s.txt	189	119.95	89	34	18.35	Y	20											83	80	12	1
+TL-DB320N		15m Retractable Auto Rewind Korea Air Hose Reel	Dynamic Power	tl-db320n.txt	269	179.95	119	27	15.65	Y	20											47	21	52	1
+VE-CRE126W20		20" 126W CREE LED 12V / 24V 4WD Work Flood Spot Light Bar	Dynamic Power	ve-cre126w20.txt	219	139.95	99	10	2.7	Y	20											67	14	13	1
+VE-CRE180W31		28" 180W CREE LED 12V / 24V 4WD Work Flood Spot Light Bar	Dynamic Power	ve-cre180w31.txt	269	179.95	119	10	3.1	Y	20											92	14	13	1
+VE-CRE36W6		7" 36W CREE LED 12V / 24V Work Flood Spot Light	Dynamic Power	ve-cre36w6.txt	99	49.95	29	8	1.05	Y	20											30	14	13	1
+VE-EPI120W24		22" 120W EPISTAR LED 12V / 24V 4WD Work Flood Spot Light Bar	Dynamic Power	ve-epi120w24.txt	189	119.95	89	10	3.15	Y	20											66	13	13	1
+VE-EPI120W26		25" 120W EPISTAR LED 12V / 24V 4WD Work Flood Spot Light Bar	Dynamic Power	ve-epi120w26.txt	199	119.95	94	9	2.2	Y	20											68	13	13	1
+VE-EPI27W		27W EPISTAR LED 12V / 24V Work Flood Spot Light	Dynamic Power	ve-epi27w.txt	69	34.95	14	8	0.75	Y	20											15	12	7	1
+VE-EPI90W19		19" 90W EPISTAR LED 12V / 24V 4WD Work Flood Spot Light Bar	Dynamic Power	ve-epi90w19.txt	179	99.95	69	8	1.4	Y	20											60	13	13	1
+VE-LEDRELAYBG		12V 40A 300W LED HID Driving Lights Wiring Harness Relay Kit	Dynamic Power	ve-ledrelaybg.txt	69	34.95	19	8	0.5	Y	20											30	10	8	1
+VE-LEDRELAYSM		12V 40A 120W LED HID Driving Lights Wiring Harness Relay Kit	Dynamic Power	ve-ledrelaysm.txt	49	29.95	12	8	0.25	Y	20											25	10	8	1

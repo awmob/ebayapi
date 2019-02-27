@@ -1,0 +1,27 @@
+
+
+items
+----------------------------------
+item_id
+item_sku
+item_title
+item_description
+item_catid
+
+
+
+
+pending_listings
+----------------------------------
+pending_listings_id
+pending_listings_item_id
+pending_listings_item_sku
+pending_listings_item_title
+pending_listings_item_description
+pending_listings_item_catid
+
+
+
+
+QUICK AND DIRTY VIA FILE UPLOAD
+

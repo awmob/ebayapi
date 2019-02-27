@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Framework</title>
+
+<style type='text/css' media='all'>@import url('userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="nav/nav.js"></script>
+<script type="text/javascript" src="nav/prototype.lite.js"></script>
+<script type="text/javascript" src="nav/moo.fx.js"></script>
+<script type="text/javascript" src="nav/user_guide_menu.js"></script>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('null');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="images/navtoggle.png" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>Databases</h1></td>
+
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+
+
+
+
+
+<br clear="all" />
+
+
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+<h2>Configuring Database</h2>
+
+<h3>config/dbase/dbase_config.php</h3>
+<p>
+	$db['hostname'] -> Name of the host<br>
+	$db['username'] -> Name of the user<br>
+	$db['password'] -> User Password<br>
+	$db['database'] -> Database Name<br>
+	$db['char_set'] = 'utf8' -> default<br>
+	$db['dbcollat'] = 'utf8_general_ci -> default
+
+
+</p>
+
+
+<h2>Calling New Database Instance</h2>
+
+<h3>app/calls/dbase_call.php</h3>
+<p>Creates instance of class -> $connection<br>
+Creates instance of class -> $dbase_getters<br>
+Creates instance of class -> $dbase_setters
+</p>
+
+
+
+
+
+<h2>Loading New Database</h2>
+
+<h3>app/dbase/sqlidbasefuncs.inc.php</h3>
+
+
+<h2>Database Classes</h2>
+
+<hr>
+<h3>app/dbase/dbase_setters.inc.php</h3>
+<hr>
+<h4>
+public function insert_query($table, array $cols)
+</h4>
+
+<p>Inserts values into database  - returns nothing. <br>$table = string -> name of database.<br>
+$cols = multidimensional array of column names then entries -> [$i][0] = col name [$i][1] = entry
+
+</p>
+
+<h4>public function update_query($table, array $cols, array $where = null)</h4>
+<p>
+		Updates data into the database - returns nothing.<br> 
+			$table = String -> table name<br>
+			$cols = multidimensional array of column names then entries -> [$i][0] = col name [$i][1] = entry<br>
+			$where = (optional) multidimensional array of column names then entries -> [$i][0] = col name [$i][1] = entry
+</p>
+
+
+<hr>
+<h3>app/dbase/dbase_getters.inc.php</h3>
+<hr>
+<h4>public function basic_get($table, $select_cols, $where_cols, $order, $limit)</h4>
+
+<p>Gets data from database - simple query, no joins. Returns array of mysql data.<br>
+
+			$table = string name of table<br>
+			$select_cols = single dimension array of column names to select. If false then select all<br>
+			$where_cols = multi dimensional array of column names and values to select. [$i][0] = column name, [$i][1] = value . if false system leaves query blank<br>
+			$order = multi dimension array of column names and asc or desc type [$i][0] = col name [$i][1] = asc / desc (represented by 0 or 1 respectively)<br>
+			$limit = single dimension associative array -> ['lower'] = start num  ['upper'] = # of public function get_last_id($table)elements to return
+
+</p>
+
+<h4>public function get_last_id($table)</h4>
+
+<p>Gets last entered id from database. Returns integer of last entered id.<br>
+
+			$table = string name of table<br>
+			
+
+</p>
+
+
+
+</div>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="#top">Top of Page</a></p>
+<p>Framework &nbsp;&middot;&nbsp; Copyright &#169; 2013 - 2013 </p>
+</div>
+
+
+
+</body>
+</html>

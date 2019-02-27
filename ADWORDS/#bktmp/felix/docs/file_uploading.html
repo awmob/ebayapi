@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Framework</title>
+
+<style type='text/css' media='all'>@import url('userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="nav/nav.js"></script>
+<script type="text/javascript" src="nav/prototype.lite.js"></script>
+<script type="text/javascript" src="nav/moo.fx.js"></script>
+<script type="text/javascript" src="nav/user_guide_menu.js"></script>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('null');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="images/navtoggle.png" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>File Uploading</h1></td>
+
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+
+
+
+
+
+<br clear="all" />
+
+
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+
+<h2>File Uploading Caller</h2>
+
+<h3>app/calls/file_uploading_caller.php</h3>
+<p>
+<ul><li>Creates instance of class -> $file_uploading</li></ul></p>
+
+
+<h2>File Uploading Config</h2>
+<h3>config/file_uploading/file_uploading_config.php</h3>
+
+
+<p>
+<ul>
+
+<li>File Settings</li>
+
+<ul>
+<li>$file_uploading_settings['filename_sanitize'] -> Regex cleaning up the filenames for upload</li>
+<li>$file_uploading_settings['max_size'] -> Maximum allowed upload file size in bytes</li>
+<li>$file_uploading_settings['max_width'] -> Maximum allowed image width in pixels. 0 = unlimited.</li>
+<li>$file_uploading_settings['max_height'] -> Maximum allowed image height in pixels. 0 = unlimited.</li>
+<li>$file_uploading_settings['min_height_width'] -> Minimum allowed image height and width.</li>
+<li>$file_uploading_settings['max_filename'] -> Maximum allowed char length of filename. 0 = unlimited.</li>
+<li>$file_uploading_settings['allow_overwrites'] -> Whether or not to allow overwrites. If not allowed, then set to false, else set to true.</li>
+</ul>
+
+<li>Message Settings</li>
+<ul>
+<li>$file_uploading_settings['file_not_exist'] -> Error message when no file chosen to upload.</li>
+<li>$file_uploading_settings['file_too_big'] -> Error message when uploaded file exceeds maximum size.</li>
+<li>$file_uploading_settings['mime_not_allowed'] -> Error message when mime type is not in allowed mime ie. not in types array $mime_types_config.</li>
+<li>$file_uploading_settings['max_image_size_error'] -> Error message when image is too big.</li>
+<li>$file_uploading_settings['min_image_size_error'] -> Error message when image is too small.</li>
+
+<li>$file_uploading_settings['upload_error'] -> Error message when file not uploaded successfully</li>
+<li>$file_uploading_settings['upload_success'] -> Success message when file uploaded successfully</li>
+</ul>
+
+</ul>
+<ul>
+<li>Mime Types</li>
+	<ul>
+	<li>$mime_types_config[$i]['mimetype'] -> Mime type</li>
+	<li>$mime_types_config[$i]['extension'] -> Mime type extension including . ie  .jpg</li>
+	</li>Extra mime types: You may add new multidimensional associative arrays of mime type sets as needed. Must be of the format: array[$]['mimetype'] & array[$]['mimetype']['extension']</li>
+	</ul>
+</ul>
+
+
+
+</p>
+
+
+<h2>File Uploading Class</h2>
+
+<hr>
+<h3>app/file_uploading/file_uploading.inc.php</h3>
+<hr>
+<h4>function __construct($file_uploading_settings)</h4>
+
+<p>Sets the class and passes the variables from config file for use as private variables in the class.</p>
+
+<h4>public function sanitize_filename($filename)</h4>
+<p>
+<ul>
+
+<li>Modifies filename to remove potential issues before upload.</li>
+
+<li>$filename = String to be modfied</li>
+
+</ul>
+</p>
+
+
+<h4>public function check_file_sizes($filename)</h4>
+<p>
+<ul>
+
+<li>Checks file size</li>
+<li>Returns error associative array -> ['error_exists'] = true or false (true if error exists). ['error_message'] = String error message.</li>
+<li>$filename = String name of file</li>
+
+</ul>
+</p>
+
+<h4>public function get_mime($filename)</h4>
+<p>
+<ul>
+
+<li>Gets the mime type</li>
+<li>Returns string with mime type.</li>
+<li>$filename = String name of file</li>
+
+</ul>
+</p>
+
+
+
+<h4>public function check_mime_allowed_general($mime, $allowed_types)</h4>
+<p>
+<ul>
+
+<li>Checks the mime type for all upload types</li>
+<li>Returns error associative array -> ['error_exists'] = true or false (true if error exists). ['error_message'] = String error message.</li>
+<li>$mime = String name of mime type</li>
+<li>$allowed_types = Selected array of desired mime types sets from config. Format: array[$i]['mimetype'], array[$i]['extension']</li>
+
+</ul>
+</p>
+
+
+
+<h4>public function set_general_file_extension($mime, $allowed_types)</h4>
+<p>
+<ul>
+
+<li>Sets the file extension for general upload</li>
+<li>Returns string with file extension. Returns false if mime type not found in allowed mime_types_config array.</li>
+<li>$mime = String name of mime type</li>
+<li>$allowed_types = Selected array of desired mime types sets from config. Format: array[$i]['mimetype'], array[$i]['extension']</li>
+
+</ul>
+</p>
+
+
+<h4>public function encrypt_filename($extension)</h4>
+<p>
+<ul>
+
+<li>Encrypts filename with md5 and appends the desired file extension</li>
+<li>Returns string with encrypted file name.</li>
+<li>$extension = String name of file extension ie .jpg</li>
+
+</ul>
+</p>
+
+
+
+<h4>public function check_file_exists_change_filename($filename, $target_folder = false)</h4>
+<p>
+<ul>
+
+<li>Appends unix epoch time and random number to start of the filename if overwrites are not allowed. Retains old filename if overwrites allowed.</li>
+<li>Returns string with file name.</li>
+<li>$filename, = String name of file</li>
+<li>$target_folder = String name of target folder</li>
+</ul>
+</p>
+
+
+<h4>public function check_image_sizes($image_file)</h4>
+<p>
+<ul>
+
+<li>Checks if image is within allowed width and height</li>
+<li>Returns error associative array -> ['error_exists'] = true or false (true if error exists). ['error_message'] = String error message.</li>
+<li>$image_file = String name of image file</li>
+
+</ul>
+</p>
+
+
+<h4>public function upload_file($tmp_filename, $target_filename, $target_folder = false)</h4>
+<p>
+<ul>
+
+<li>Uploads file to desired location</li>
+<li>Returns error associative array -> ['error_exists'] = true or false (true if error exists). ['error_message'] = String error / success message.</li>
+<li>$tmp_filename = String of temp file</li>
+<li>$target_filename = String name of target file</li>
+<li>$target_folder = String name of target folder -> optional. Default = false</li>
+
+</ul>
+</p>
+
+
+
+<h4>public function quick_image_upload($tmp_file, $base_filename, $type, $allowed_types, $target_folder = false)</h4>
+<p>
+<ul>
+
+<li>Uploads file to desired location and completes verification</li>
+<li>Returns $errors associative array -> 
+	<ul>
+		<li>$errors['error_exists'] = true or false (true if error exists).</li> 
+		<li>$errors['error_message'] = String error / success message.</li>
+		<li>$errors['filename'] = name of file or false if error</li> 
+		<li>$errors['filepath'] = name of folder uploaded to or false if error.</li>
+	</ul>
+			<li>$tmp_file = String of temp file</li>
+			<li>$base_filename = String of base file name</li>
+			<li>$type = type for filename saving - 0 = encrypt, 1 = sanitize, etc.</li>
+			<li>$allowed_types = Selected array of desired mime types sets from config. Format: array[$i]['mimetype'], array[$i]['extension']</li>
+			<li>$target_folder = string target folder / for upload -> default = false</li>
+</ul>
+</p>
+
+
+
+<h4>public function quick_file_upload($tmp_file, $base_filename, $type, $target_folder = false)</h4>
+<p>
+<ul>
+
+<li>Uploads file to desired location and completes verification</li>
+<li>Returns $errors associative array -> 
+	<ul>
+		<li>$errors['error_exists'] = true or false (true if error exists).</li> 
+		<li>$errors['error_message'] = String error / success message.</li>
+		<li>$errors['filename'] = name of file or false if error</li> 
+		<li>$errors['filepath'] = name of folder uploaded to or false if error.</li>
+	</ul>
+
+						
+						
+			<li>$tmp_file = String of temp file</li>
+			<li>$base_filename = String of base file name</li>
+			<li>$type = type for filename saving - 0 = encrypt, 1 = sanitize, etc.</li>
+			<li>$target_folder = string target folder / for upload -> default = false</li>
+
+</ul>
+</p>
+
+
+
+</div>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="#top">Top of Page</a></p>
+<p>Framework &nbsp;&middot;&nbsp; Copyright &#169; 2013 - 2013 </p>
+</div>
+
+
+
+</body>
+</html>

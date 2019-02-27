@@ -1,0 +1,4 @@
+AuthUserFile "/home/phptutes/.htpasswds/public_html/felix/passwd"
+AuthType Basic
+AuthName "felix"
+require valid-user

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Framework</title>
+
+<style type='text/css' media='all'>@import url('userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="nav/nav.js"></script>
+<script type="text/javascript" src="nav/prototype.lite.js"></script>
+<script type="text/javascript" src="nav/moo.fx.js"></script>
+<script type="text/javascript" src="nav/user_guide_menu.js"></script>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('null');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="images/navtoggle.png" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>Captchca</h1></td>
+
+<p>The captchca class provides an extra level of data entry security. The captchca requires storage in a session variable, and does not load session variables. You will need to start a session separately if you wish to use captchca.</p>
+
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+
+
+
+
+
+<br clear="all" />
+
+
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+
+<h2>Captchca Caller</h2>
+
+<h3>app/calls/captchca_call.php</h3>
+<p><ul>
+<li>Creates instance of class -> $captchca</li>
+<li>Creates random 5 char string for captchca</li>
+<li>Creates and saves image in filesystem for captchca</li>
+<li>Returns captchca image string with img tags -> $captchca_image_show</li>
+<li>Adds full filesystem path for captchca image to: $_SESSION['captchca_image']</li>
+<li>Adds captchca text to: $_SESSION['captchca_text']</li>
+</ul>
+</p>
+
+<h2>Captchca Class</h2>
+
+<hr>
+<h3>app/captchca/captchca.inc.php</h3>
+<hr>
+<h4>public function generate_filename()</h4>
+
+<p><ul>
+
+<li>Creates and returns random filename for captchca -> xxxxx.jpg</li>
+
+</ul></p>
+
+<h4>public function generate_random()</h4>
+
+<p><ul>
+
+<li>Creates and returns random string for captchca</li>
+
+</ul></p>
+
+<h4>public function generate_captchca_images($image_loc, $string, $save_loc)</h4>
+
+<p><ul>
+
+<li>Creates and saves image for captchca</li>
+<li>$image_loc -> String -> file system location of the raw source image.</li>
+<li>$string -> String -> random 5 char string produced earlier by generate_random().</li>
+<li>$save_loc -> String -> file system save location for image.</li>
+</ul></p>
+
+<h4>public function show_captchca_image($image_loc)</h4>
+
+<p><ul>
+
+<li>Produces image html with img tags to display captchca image.</li>
+<li>$image_loc -> String -> http location of the raw source image.</li>
+</ul></p>
+
+
+
+
+</div>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="#top">Top of Page</a></p>
+<p>Framework &nbsp;&middot;&nbsp; Copyright &#169; 2013 - 2013 </p>
+</div>
+
+
+
+</body>
+</html>

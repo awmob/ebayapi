@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Framework</title>
+
+<style type='text/css' media='all'>@import url('userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="nav/nav.js"></script>
+<script type="text/javascript" src="nav/prototype.lite.js"></script>
+<script type="text/javascript" src="nav/moo.fx.js"></script>
+<script type="text/javascript" src="nav/user_guide_menu.js"></script>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('null');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="images/navtoggle.png" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>Imaging</h1></td>
+
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+
+
+
+
+
+<br clear="all" />
+
+
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+
+<h2>Imaging Caller</h2>
+
+<h3>app/calls/imaging_call.php</h3>
+<p>Creates instance of class -> $imaging</p>
+
+
+<h2>Imaging Config</h2>
+<h3>config/imaging/imaging_config.php</h3>
+<p>	$imaging_config['quality']  -- 0-100 for image quality<br>
+	$imaging_config['thumb_width'] = width of thumbnail<br>
+	$imaging_config['thumb_height'] = height of thumbnail<br>
+	$imaging_config['main_width'] = width of main image<br>
+	$imaging_config['main_height'] = height of main image<br>
+	$imaging_config['watermark_transparency'] = 0-100 for transparency of watermark</p>
+
+
+<h2>Imaging Class</h2>
+
+<hr>
+<h3>app/imaging/imaging.inc.php</h3>
+<hr>
+<h4>public function add_watermark($main_image, $watermark, $target_file, $image_quality, $transparency)</h4>
+
+<p>Sets a watermark based on watermark input file. Saves new file to desired location. Must use PNG 8 for background transparency to work.</p>
+<p>$main_image -> path and filename of source image<br/>
+$watermark -> path and filename of png8 watermark image<br/>
+$target_file -> path and filename of the location to save the file<br/>
+$image_quality -> passed from config - quality of final image 0-100<br/>
+$transparency -> passed from config - transparency of final image 0-100
+
+</p>
+
+<h4>public function check_and_resize_image($file, $target_dir, $desired_width, $desired_height, $image_quality)</h4>
+
+<p>Resizes and saves image to desired location.</p>
+<p>
+$file -> path and filename of source image<br/>
+$target_dir -> path and filename of the location to save the file<br/>
+$desired_width -> desired final width. If set to false, will use desired height and resize image to same aspect ratio as original.<br/>
+$desired_height -> desired final height. If set to false, will use desired width and resize image to same aspect ratio as original.<br/>
+Either $desired_width or $desired_height or both MUST be set. If both are set to false, nothing will happen.<br/>
+$image_quality -> passed from config - quality of final image 0-100<br/>
+
+</p>
+
+
+
+
+</div>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="#top">Top of Page</a></p>
+<p>Framework &nbsp;&middot;&nbsp; Copyright &#169; 2013 - 2013 </p>
+</div>
+
+
+
+</body>
+</html>

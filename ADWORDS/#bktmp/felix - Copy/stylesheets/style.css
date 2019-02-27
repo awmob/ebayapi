@@ -1,0 +1,149 @@
+
+
+	body{
+		font-family: Arial;
+		font-size: 12px;
+
+	}
+
+	h1{
+		font-family: Arial;
+		font-size: 20px;
+		font-weight: bolder;
+		color: #b40000;
+		
+	}
+
+
+	h2{
+		font-family: Arial;
+		font-size: 14px;
+		font-weight: bolder;
+		color: #b40000;
+		
+	}
+
+	h3{
+		font-family: Arial;
+		font-size: 12px;
+		font-weight: bolder;
+		color: #b40000;
+		font-style: italic;
+		
+	}
+
+	fieldset{
+		margin: 10px 5px 10px 0px;
+		padding: 10px;
+		border: solid;
+		border-width: 1px;
+		border-color: #ddd;
+		background-color: #fefefe;
+	}
+
+
+	a:link{
+		text-decoration: underline;
+		color: #5f0000;
+	}
+	
+	a:active{
+		text-decoration: underline;
+		color: #5f0000;
+	}
+	a:visited{
+		text-decoration: underline;
+		color: #5f0000;
+	}
+a:hover{
+		text-decoration: underline;
+		color: #cd0202;
+	}
+
+	.wrappermain{
+		min-width: 1200px;
+		padding: 10px 10px 10px 10px;
+		
+
+	}
+
+
+	.linermain, .linersub{
+		width: 95%;
+		height: 10px;
+		border-style: dashed;
+		border-color: #ccc;
+		border-width: 1px 0px 0px 0px;
+		margin-top: 5px;
+	}
+
+	.linersub{
+		border: none;
+	}
+
+
+	.leftmenu{
+		width: 280px;
+		padding-right: 20px;
+		float: left;
+	}
+	
+	.rightmenu{
+		width: 900px;
+		float: left;
+	}
+
+	.newshow, .alerterror, .alertok{
+		border-style: dashed;
+		border-color: #666;
+		border-width: 1px 1px 1px 1px;
+		padding: 5px;
+		background-color: #eee;
+		margin-bottom: 5px;
+	}
+
+	.alerterror{
+		background-color: #fe5151;
+	}
+
+
+	.alertok{
+		background-color: #8ffd64;
+	}
+
+
+	.tdheader, .tdmain{
+		
+		padding: 5px 10px 5px 10px;
+		background-color: #aaa;
+		color: white;
+		font-weight: normal;
+		border-style: solid;
+		border-color: #666;
+		border-width: 1px 1px 1px 1px;
+		
+	}
+
+	.tdmain{
+		background-color: #eee;
+		color:black;
+		font-weight: normal;
+	}
+
+	.show_running{
+		padding: 10px;
+		color:white;
+		background-color: #ab0000;
+		width: 1200px;
+	}
+
+	.div_inner_left{
+		width: 420px;
+		margin-right: 10px;
+		margin-left: 10px;
+		float:left;
+	}
+
+	.clearme{
+		clear:both;
+	}

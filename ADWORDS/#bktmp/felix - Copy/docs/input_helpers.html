@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Framework</title>
+
+<style type='text/css' media='all'>@import url('userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="nav/nav.js"></script>
+<script type="text/javascript" src="nav/prototype.lite.js"></script>
+<script type="text/javascript" src="nav/moo.fx.js"></script>
+<script type="text/javascript" src="nav/user_guide_menu.js"></script>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('null');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="images/navtoggle.png" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>Input Helpers</h1></td>
+
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+
+
+
+
+
+<br clear="all" />
+
+
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+
+<h2>Main Caller</h2>
+
+<h3>app/calls/main_caller.php</h3>
+<p>Automatically loaded at runtime<br>
+Creates instance of class -> $input_helper<br>
+Also creates instances of other helper classes.</p>
+
+
+<h2>Helper Config (shared config file between classes)</h2>
+<h3>config/imaging/helper_config.php</h3>
+<p>	
+
+	$input_helper_settings['min_pass_length'] -> Minimum char length of password<br>
+	$input_helper_settings['max_pass_length'] -> Max char length of password<br>
+	$input_helper_settings['len_pass_error_msg'] -> Shows error message if length violated<br>
+</p>
+<p>
+	$input_helper_settings['min_user_name_length'] -> Min char length of username<br>
+	$input_helper_settings['max_user_name_length'] -> Max char length of username<br>
+	$input_helper_settings['len_user_name_error_msg'] -> Shows error message if length violated<br>
+</p>
+<p>
+	$input_helper_settings['main_user_name_char_regex'] -> Regex of allowed characters in username<br>
+	$input_helper_settings['char_user_name_error_msg'] -> Shows error message if illegal characters used.<br>
+</p>
+<p>
+	$input_helper_settings['alpha_space'] -> Regex allowing only alpha and spaces<br>
+	$input_helper_settings['alpha_space_error_msg'] -> Shows error message if illegal characters used.<br>
+</p>
+<p>
+	$input_helper_settings['password_salt'] -> Hashed salt for password security<br>
+	$input_helper_settings['password_addenda'] -> Extra chars (non alpha numeric) for password security<br>
+	$input_helper_settings['hash_algorithm'] -> string of password algorithm - default = "sha512"
+
+</p>
+<p>$input_helper_settings['filename_sanitize'] -> Regex cleaning up the filenames for upload</p>
+
+<p>$ascii_table[$i]['base'] -> The basic special character<br>
+	$ascii_table[$i]['code'] -> The ascii code for the special character</p>
+
+<h2>Input Helper Class</h2>
+
+<hr>
+<h3>app/helpers/input_helper.inc.php</h3>
+<hr>
+<h4>function __construct($input_helper_settings)</h4>
+
+<p>Sets the class and passes the variables from config file for use as private variables in the class.</p>
+
+
+
+<h4>public function set_hash($string)</h4>
+
+<p>Converts the string to desired hash algorithm - esp for passwords. Uses password salt in config prior to hashing for further security.</p>
+<p>Returns: hashed string</p>
+<p>$string = String to be converted</p>
+
+
+
+<h4>public function check_new_pass($pass)</h4>
+
+<p>Checks if password is of the required length. </p>
+
+<p>Returns: associative array['error_exists'] = (true or false) -> $error['error_message'] = string with error message.</p>
+
+<p>$pass = Password to be checked. String.</p>
+
+
+
+<h4>public function check_new_username($username)</h4>
+
+<p>Checks if username is of the required length and doesn't contain illegal characters.</p>
+<p>Returns: associative array['error_exists'] = (true or false) -> $error['error_message'] = string with error message.</p>
+<p>$username = Username to be checked. String.</p>
+
+
+
+<h4>public function set_unset_ascii_text($string, $to_ascii = true)</h4>
+
+<p>Replaces instances of ascii text with normal, and vice versa. Returns modified string. Only perform on text without html markup.</p>
+<p>Returns: modified string</p>
+<p>$string = String to be modfied<br>
+			$to_ascii = true or false. False = from ascii code to standard. True = from standard to ascii code. Default = true.</p>
+
+
+
+
+
+
+
+
+</div>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="#top">Top of Page</a></p>
+<p>Framework &nbsp;&middot;&nbsp; Copyright &#169; 2013 - 2013 </p>
+</div>
+
+
+
+</body>
+</html>

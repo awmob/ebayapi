@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Framework</title>
+
+<style type='text/css' media='all'>@import url('userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="nav/nav.js"></script>
+<script type="text/javascript" src="nav/prototype.lite.js"></script>
+<script type="text/javascript" src="nav/moo.fx.js"></script>
+<script type="text/javascript" src="nav/user_guide_menu.js"></script>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('null');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="images/navtoggle.png" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>Curl</h1></td>
+
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+
+
+
+
+
+<br clear="all" />
+
+
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+
+<h2>Curl Caller</h2>
+
+<h3>app/calls/curler_call.php</h3>
+<p>Creates instance of class -> $curler</p>
+
+
+<h2>Curler Config</h2>
+<h3>config/curler/curler_config.php</h3>
+<p>$curl_store['cookie'] -> file system location of the cookie to save data to.</p>
+
+
+<h2>Curler Class</h2>
+
+<hr>
+<h3>app/curl/curler.inc.php</h3>
+<hr>
+<h4>function curl_getter($url)</h4>
+
+<p>Basic curl getter without passing any other parameters or variables. $url = URI of target.</p>
+
+<h4>function curl_ssl_getter($urla, $usrpass)</h4>
+
+<p>SSL curl getter passing username and pass and storing in cookie. $url = URI of target. $usrpass = string-> 'username:pass'</p>
+
+<h4>function curl_poster($urla,$data)</h4>
+
+<p>curl poster passing data via post storing in cookie. $url = URI of target. $data = string of parameters</p>
+
+<h4>function curl_main_login($url,$data,$proxy,$proxystatus)</h4>
+
+<p>curl main poster with proxy.</p>
+
+<h4>function curl_ssl_login($url,$data)</h4>
+
+<p>curl ssl main login.</p>
+
+
+
+</div>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="#top">Top of Page</a></p>
+<p>Framework &nbsp;&middot;&nbsp; Copyright &#169; 2013 - 2013 </p>
+</div>
+
+
+
+</body>
+</html>

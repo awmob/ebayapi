@@ -1,0 +1,25 @@
+
+
+Listing Report -> Clear listing reportdbase -> Upload file with three cols only -> Store in dbase
+
+Active Listings -> Clear current active listings dbase -> Do ebay api download -> Save a file -> Also save in dbase
+
+
+
+
+
+TABLES
+------------
+last_updates
+
+ebay_listing_report
+
+Active Listings
+
+Presale items
+
+GTC Free Shipping Item Listing Details
+
+10 Day Standard Listing Details
+
+GTC Free Ship Prices
